@@ -1,0 +1,28 @@
+! movieffm 廣告過濾清單（含 gimy、inmi 支援）
+! 日期: 2025-07-04
+! 作者: @sean90187
+
+! --- 移除影片播放前後廣告 iframe / script ---
+||movieffm.net^*/ads*
+||movieffm.net^*/adscript*
+||movieffm.net^*/videoad*
+||gimy.ai^*/ads*
+||inmi.app^*/ads*
+
+! --- 隱藏浮動廣告、橫幅、彈出窗 ---
+movieffm.net##.adsbox
+movieffm.net##.popup
+movieffm.net##.video-ads
+gimy.ai##.adsbygoogle
+inmi.app##.popup-ad
+
+! --- 阻擋外部第三方廣告來源 ---
+||googlesyndication.com^
+||doubleclick.net^
+||sacwumsf.com^
+||rmvvawqleqaoj.top^
+
+! --- 避免 m3u8 播放器遭覆蓋或干擾 ---
+movieffm.net##.overlay-ads
+gimy.ai##.overlay-ads
+inmi.app##.overlay-ads
